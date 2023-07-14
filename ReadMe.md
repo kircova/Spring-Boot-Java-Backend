@@ -1,4 +1,4 @@
-# Midas Case Study
+# Spring Boot, Java, PostgreSQL Case Study
 
 This is a Spring Boot application that showcases the Midas case study. It provides endpoints to retrieve and sync instrument and market data from the Robinhood API.
 
