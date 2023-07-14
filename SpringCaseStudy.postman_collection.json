@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "c0f7d1a5-6ba6-4f86-b491-1a8dc4406081",
-		"name": "MidasCaseStudy",
+		"name": "SpringCaseStudy",
 		"description": "This collection contains routes for interacting with the Midas Case Study application.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "10201256"
