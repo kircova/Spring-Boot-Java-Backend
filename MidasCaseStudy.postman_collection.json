@@ -1,0 +1,178 @@
+{
+	"info": {
+		"_postman_id": "c0f7d1a5-6ba6-4f86-b491-1a8dc4406081",
+		"name": "MidasCaseStudy",
+		"description": "This collection contains routes for interacting with the Midas Case Study application.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10201256"
+	},
+	"item": [
+		{
+			"name": "Routes",
+			"item": [
+				{
+					"name": "GET INSTRUMENT BY SYMOL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/instruments/AIO",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"instruments",
+								"AIO"
+							]
+						},
+						"description": "Retrieves the instrument with the specified symbol from the local database.\n\n  \nThis request utilizes cache to improve the performance and efficiency of retrieving the instrument with the specified symbol from the local database.\n\nWhen the request is made for a specific symbol, the application first checks if the instrument is already stored in the cache. If the instrument is found in the cache, it is directly returned without querying the database, resulting in faster response times."
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL INSTRUMENTS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/instruments/getall",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"instruments",
+								"getall"
+							]
+						},
+						"description": "Retrieves all instruments from the local database."
+					},
+					"response": []
+				},
+				{
+					"name": "INSTRUMENT SYNC",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/instruments/sync",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"instruments",
+								"sync"
+							]
+						},
+						"description": "Syncs the instruments from the Robinhood API to the local database."
+					},
+					"response": []
+				},
+				{
+					"name": "MARKET/SYNC",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/markets/sync",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"markets",
+								"sync"
+							]
+						},
+						"description": "Syncs the markets from the Robinhood API to the local database."
+					},
+					"response": []
+				}
+			],
+			"description": "This folder contains routes related to the Midas Case Study application."
+		},
+		{
+			"name": "Robinhood Endpoints",
+			"item": [
+				{
+					"name": "GET MARKETS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.robinhood.com/markets",
+							"protocol": "https",
+							"host": [
+								"api",
+								"robinhood",
+								"com"
+							],
+							"path": [
+								"markets"
+							]
+						},
+						"description": "Retrieves the markets from the Robinhood API."
+					},
+					"response": []
+				},
+				{
+					"name": "GET INSTR BY SYMBOL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.robinhood.com/instruments/?symbol=AAPL",
+							"protocol": "https",
+							"host": [
+								"api",
+								"robinhood",
+								"com"
+							],
+							"path": [
+								"instruments",
+								""
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "AAPL"
+								}
+							]
+						},
+						"description": "Retrieves all instruments from the Robinhood API."
+					},
+					"response": []
+				},
+				{
+					"name": "GET INSTR",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.robinhood.com/instruments/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"robinhood",
+								"com"
+							],
+							"path": [
+								"instruments",
+								""
+							]
+						},
+						"description": "Retrieves all instruments from the Robinhood API."
+					},
+					"response": []
+				}
+			],
+			"description": "This folder contains endpoints related to the Robinhood API."
+		}
+	]
+}
