@@ -1,6 +1,6 @@
 # Spring Boot, Java, PostgreSQL Case Study
 
-This is a Spring Boot application that showcases the Midas case study. It provides endpoints to retrieve and sync instrument and market data from the Robinhood API.
+This is a Spring Boot application that showcases the case study. It provides endpoints to retrieve and sync instrument and market data from the Robinhood API.
 
 ### Testing the Application
 A Postman collection is provided along with this documentation, which contains sample requests for testing the application's endpoints. Import the Postman collection and execute the requests to interact with the application. For sync requests, please refer to the database to verify that the data has been synced or check the console for the log.
@@ -105,7 +105,7 @@ The application includes the following configuration:
 The application properties include the configuration for the database connection:
 
 ```
-spring.datasource.url=jdbc:postgresql://localhost:5436/midas
+spring.datasource.url=jdbc:postgresql://localhost:5436/dbname
 spring.datasource.username=postgres
 spring.datasource.password=123
 spring.datasource.driver-class-name=org.postgresql.Driver
@@ -124,7 +124,7 @@ To run the Spring Boot application, follow these steps:
 1. Ensure that you have a PostgreSQL database running on `localhost:5436` with the specified credentials and database name.
 2. Import the data on seed.sql into your empty database.
 3. Build the application using Maven: `mvn clean install`.
-4. Run the application: `java -jar target/springmidas-0.0.1-SNAPSHOT.jar`.
+4. Run the application: `java -jar target/appname-0.0.1-SNAPSHOT.jar`.
 5. The application will be accessible at `http://localhost:8080`.
 6. Import the Postman collection and execute the requests to interact with the application.
 
