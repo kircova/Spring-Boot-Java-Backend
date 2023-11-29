@@ -176,5 +176,3 @@ docker build -t appname .
 docker run -d -p 8080:8080 --name=testapp_con appname
 ```
 ---
-
-Enjoy exploring the spring case study with this Spring Boot application! If you have any questions or need further assistance, please don't hesitate to reach out me ykircova@gmail.com
